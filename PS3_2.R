@@ -6,11 +6,11 @@ library(dplyr)
 library(ggplot2)
 
 # Read csv
-Bone_data <- read.csv("Bone_Oxygen.csv", header=T)  #Êý¾ÝÒÑ¾­ÊÖ¶¯ÊäÈëµ½csvÎÄ¼þÖÐ£¬¶ÁÈëcsvÎÄ¼þ
+Bone_data <- read.csv("Bone_Oxygen.csv", header=T)  #æ•°æ®å·²ç»æ‰‹åŠ¨è¾“å…¥åˆ°csvæ–‡ä»¶ä¸­ï¼Œè¯»å…¥csvæ–‡ä»¶
 data      <- as_tibble(Bone_data)
 
 data                 %>%
-  group_by(BONE)     %>%                            #ÒÔ¹ÇÍ·ÀàÐÍ¾ÛÀà
+  group_by(BONE)     %>%                            #ä»¥éª¨å¤´ç±»åž‹èšç±»
   ggplot(aes(x = BONE, y = OXYGEN, fill = BONE)) +
   geom_boxplot() +
   ylim(10,13)  +
@@ -20,4 +20,5 @@ data                 %>%
 anova_one_way <- aov(OXYGEN ~ BONE, data = data)
 summary(anova_one_way)
 TukeyHSD(anova_one_way)
-#ÓÐ99.9%µÄ¸ÅÂÊÈÏÎªÕâÐ©¹ÇÍ·²»ÊÇÍ¬Ò»ÎÂ¶ÈÏÂÐÎ³ÉµÄ£¬¼´¿ÖÁúÊôÓÚ±äÎÂ¶¯Îï
+#æœ‰99.9%çš„æ¦‚çŽ‡è®¤ä¸ºè¿™äº›éª¨å¤´ä¸æ˜¯åŒä¸€æ¸©åº¦ä¸‹å½¢æˆçš„ï¼Œå³æé¾™å±žäºŽå˜æ¸©åŠ¨ç‰©
+# good work 
