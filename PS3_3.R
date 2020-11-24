@@ -6,8 +6,8 @@ library(dplyr)
 library(ggplot2)
 
 #Import Data
-#¶¨Òåpregnant:»³ÔĞ×´¿ö£ºÒò×ÓË®Æ½£º1ºÍ2(1Îª»³ÔĞ)
-#¶¨Òåvegetarians£ºÊÇ·ñËØÊ³Õß£»Òò×ÓË®Æ½£º1ºÍ2(1ÎªËØÊ³Õß)
+#å®šä¹‰pregnant:æ€€å­•çŠ¶å†µï¼šå› å­æ°´å¹³ï¼š1å’Œ2(1ä¸ºæ€€å­•)
+#å®šä¹‰vegetariansï¼šæ˜¯å¦ç´ é£Ÿè€…ï¼›å› å­æ°´å¹³ï¼š1å’Œ2(1ä¸ºç´ é£Ÿè€…)
 a   <-  data.frame(pregnant   = c(1,1,1,1,1,1),
                   vegetarians = c(2,2,2,2,2,2),
                   zinc_levels = c(185,189,187,181,150,176))
@@ -33,3 +33,4 @@ aov1 <- aov( zinc_levels~vegetarians, data=Data)
 summary(aov1)
 aov2 <- aov( zinc_levels~vegetarians + pregnant, data=Data)
 summary(aov2)
+# good work 
