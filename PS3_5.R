@@ -36,7 +36,9 @@ abline(fit_assumption1, col="red")
 summary(fit_assumption1)
 # Estimate the  the age of the universe(Million years)
 Universe_Age = fit_assumption1$coefficients*30.9*10^18/60/60/24/365/10^8
-sprintf("宇宙的年龄是 %f 亿年",Universe_Age)
+sprintf("脫卯脰忙碌脛脛锚脕盲脢脟 %f 脪脷脛锚",Universe_Age)
 
 #5.4
-#在report中
+#脭脷report脰脨
+
+# good work
