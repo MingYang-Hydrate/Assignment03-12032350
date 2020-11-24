@@ -14,7 +14,7 @@ data(cpus)
 head(cpus)
 nrow(cpus)
 #split the dataset randomly into two subsets
-ind <- sample(nrow(cpus), replace=FALSE,0.8*nrow(cpus))   #ÑµÁ·¼¯80%Êı¾İµã£¬²âÊÔ¼¯20%Êı¾İµã
+ind <- sample(nrow(cpus), replace=FALSE,0.8*nrow(cpus))   #è®­ç»ƒé›†80%æ•°æ®ç‚¹ï¼Œæµ‹è¯•é›†20%æ•°æ®ç‚¹
 trainData <- cpus[ind,]
 testData  <- cpus[-ind,]
 nrow(trainData)
@@ -57,6 +57,6 @@ mean(testData$perf)
 (mean(perf_predict) - mean(testData$perf))/
   mean(testData$perf)*100
 
-
-
-
+# MingYANG recommeded:
+# I think in this problem "mean(perf_predic - testData$perf)" should be more suitable
+# the end 
